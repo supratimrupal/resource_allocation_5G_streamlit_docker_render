@@ -11,11 +11,11 @@ scaler = pickle.load(open('saved_model_misc/RA_5G_scaler.pkl', 'rb'))
 st.title("5G Resource Allocation Prediction")
 
 # User Input Fields (without Resource_Allocation)
-application_type = st.selectbox("Select Application Type", ['Video_Call', 'Voice_Call', 'Streaming', 'Gaming', 'Emergency_Service'])
-signal_strength = st.number_input("Enter Signal Strength (dBm)", min_value=-100, max_value=0, value=-75)
+application_type = st.selectbox("Select Application Type", ['Video_Call', 'Voice_Call', 'Streaming', 'Emergency_Service','Online_Gaming', 'Background_Download', 'Web_Browsing','IoT_Temperature', 'Video_Streaming', 'File_Download', 'VoIP_Call'])
+signal_strength = st.number_input("Enter Signal Strength (dBm)", value=-80)
 latency_in_ms = st.number_input("Enter Latency (ms)", min_value=0, value=30)
-required_bandwidth = st.number_input("Enter Required Bandwidth (Mbps)", min_value=0.0, value=10240.0)
-allocated_bandwidth = st.number_input("Enter Allocated Bandwidth (Mbps)", min_value=0.0, value=15360.0)
+required_bandwidth = st.number_input("Enter Required Bandwidth (Kbps)", min_value=0.001, value=1024.0)
+allocated_bandwidth = st.number_input("Enter Allocated Bandwidth (Kbps)", min_value=0.001, value=1024.0)
 
 
 bandwidth_utilization = allocated_bandwidth / required_bandwidth 
