@@ -1,20 +1,15 @@
-'Multiple Disease Prediction System' 
+5G Resource Allocation Prediction
 
-['Diabetes Prediction','Heart Disease Prediction','Parkinsons Prediction']
+Random Forest Regressor
 
-Classifications Model Used : 
-Diabetes Prediction - SVM 
-Heart Disease Prediction - Logistic Regression
-Parkinsons Prediction - SVM
-
-site link: https://docker-multiple-disease-pred-model.onrender.com
+site link: (https://resource-allocation-5g-streamlit-docker.onrender.com/)
 **************************************************
 
 Multiple_Disease_Prediction_web_app
 Anaconda Environments --> MachineLearning --> Open Terminal
 
 for local run:
-streamlit run multiple_disease_prediction_web_app.py
+streamlit run resource_allocation_prediction.py
 
 ***********************************
 
@@ -23,10 +18,10 @@ pip install -r requirements.txt
 Dockerfile:
 
 FROM python:3.9
-COPY . multiple_disease_prediction_web_app/
-WORKDIR multiple_disease_prediction_web_app/
+COPY . resource_allocation_optimization_5G_webapp/
+WORKDIR resource_allocation_optimization_5G_webapp/
 RUN pip install -r requirements.txt
 EXPOSE $PORT
-CMD streamlit run multiple_disease_prediction_web_app.py
+CMD streamlit run resource_allocation_prediction.py
 
 *********************************************************
